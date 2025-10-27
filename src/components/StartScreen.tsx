@@ -75,7 +75,6 @@ export function StartScreen() {
       }))
 
       // Update game state with story, choices, and image
-      const { updateGameState } = useGameState()
       updateGameState({
         currentStoryText: storyData.storyText,
         currentChoices: storyData.choices,
