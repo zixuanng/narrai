@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { useGameState } from '@/hooks/useGameState'
 
 export function StartScreen() {
-  const { gameState, resetGame, loadGame, setIsGameActive } = useGameState()
+  const { gameState, resetGame, updateGameState, setIsGameActive } = useGameState()
   const [hasSavedGame, setHasSavedGame] = useState(false)
   const [isStarting, setIsStarting] = useState(false)
 
