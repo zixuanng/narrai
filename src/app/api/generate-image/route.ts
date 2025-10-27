@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { generateImage } from '@/lib/replicate'
+import { generateImage } from '@/lib/googleImage'
 import { Character } from '@/types/game'
 
 interface RequestBody {
