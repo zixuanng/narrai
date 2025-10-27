@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    // Call Replicate API
+    // Call Google Imagen API
     const imageUrl = await generateImage({
       prompt,
       sessionSeed,
