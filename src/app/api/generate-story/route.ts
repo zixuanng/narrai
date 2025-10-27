@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { generateStory } from '@/lib/anthropic'
+import { generateStory } from '@/lib/gemini'
 import { parseGameState } from '@/lib/parseGameState'
 import { INITIAL_SCENARIO_PROMPT } from '@/lib/prompts'
 import { Character } from '@/types/game'
