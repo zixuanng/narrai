@@ -30,16 +30,16 @@ export async function POST(request: NextRequest) {
     // Check if this is the initial game generation
     const isInitialGeneration = playerChoice === 'START'
 
-    // Build conversation history for Claude
+    // Build conversation history for Gemini
     const conversationHistory = storyHistory.map(turn => [
       { role: 'user', content: turn.userChoice },
-      { role: 'assistant', content: turn.aiResponse }
+      { role: 'model', content: turn.aiResponse }
     ]).flat()
 
     // Use INITIAL_SCENARIO_PROMPT for START, otherwise use player choice
     const promptToUse = isInitialGeneration ? INITIAL_SCENARIO_PROMPT : playerChoice
 
-    // Call Claude API
+    // Call Gemini API
     const aiResponse = await generateStory({
       storyHistory: conversationHistory,
       playerChoice: promptToUse,
